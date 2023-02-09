@@ -3,14 +3,14 @@ var InitialCount = -1;
 
 
 const deleteProducts = async() => {
-    url = 'https://alert-erin-elk.cyclic.app/product';
+    url = 'https://alert-erin-elk.cyclic.app';
 
     let res = await axios.get(url);
     responseText = res.data;
     const products = responseText;
 
     for (let product of products) {
-        const response = await axios.delete(`https://alert-erin-elk.cyclic.app/product/${product.id}`)
+        const response = await axios.delete(`https://alert-erin-elk.cyclic.app/${product.id}`)
 
     }
     location.reload();
@@ -22,7 +22,7 @@ const deleteProducts = async() => {
 }
 
 const loadProducts = async() => {
-    url = 'https://alert-erin-elk.cyclic.app/product';
+    url = 'https://alert-erin-elk.cyclic.app';
 
     let res = await axios.get(url);
     responseText = await res.data;
@@ -79,7 +79,7 @@ const loadProducts = async() => {
 var checkout = async() => {
     document.getElementById('2').innerHTML = "<span class='loader-16' style='margin-left: 44%;'></span>"
     var payable = 0;
-    url = 'https://alert-erin-elk.cyclic.app/product';
+    url = 'https://alert-erin-elk.cyclic.app';
 
     let res = await axios.get(url);
     responseText = await res.data;

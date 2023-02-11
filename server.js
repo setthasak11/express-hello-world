@@ -9,6 +9,7 @@ var db = require('./db');
 let products = [];
 let orders = [];
 app.use(cors());
+app.use(express.static('public', options))
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

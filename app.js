@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express()
+var mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://setthasak11:jeffy11900fifa@cluster0.1z4ijik.mongodb.net/?retryWrites=true&w=majority');
 // #############################################################################
 // Logs all request paths and method
 let products = [];

@@ -1,7 +1,9 @@
 const express = require('express')
 const path = require("path");
-const app = express()
+const cors = require('cors');
 
+const app = express()
+app.use(cors());
 // #############################################################################
 // Logs all request paths and method
 app.use(function (req, res, next) {
